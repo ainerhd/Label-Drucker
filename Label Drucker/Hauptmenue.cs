@@ -1,5 +1,6 @@
 ﻿using Label_Drucker.SAMsphereServer;
 using Label_Drucker.Services;
+using System.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -18,8 +19,8 @@ namespace Label_Drucker
 
         static String auftragsNummer;  // Auftragsnummer
         static String sprachEinstellung = "de";  // Spracheinstellung (Standard: Deutsch)
-        string artikelListePfad = @"Z:\1 Auma-Organisation\1.1 SCK\1.1.6 IV\IFS Auftragsetiketten\Filterlisten\Artikelliste.txt";  // Definiere den Pfad zur Artikelliste
-        string beschreibungListePfad = @"Z:\1 Auma-Organisation\1.1 SCK\1.1.6 IV\IFS Auftragsetiketten\Filterlisten\Beschreibungsliste.txt";  // Definiere den Pfad zur Beschreibungliste
+        string artikelListePfad = ConfigurationManager.AppSettings["ArtikelListePfad"];  // Definiere den Pfad zur Artikelliste
+        string beschreibungListePfad = ConfigurationManager.AppSettings["BeschreibungListePfad"];  // Definiere den Pfad zur Beschreibungliste
 
 
         static ORD_Order statAuftrag;  // Der aktuelle Auftrag
@@ -32,6 +33,9 @@ namespace Label_Drucker
         static bool printNumber; // Prüft was gedruckt werden soll
 
         private readonly PrintService _printService;
+        private readonly ConfigurationApiService _configurationService;
+
+        private string _lastConfigurationData;
 
 
         // Liste aller Buttons, die deaktiviert werden sollen
@@ -41,6 +45,9 @@ namespace Label_Drucker
         {
             InitializeComponent();
             _printService = new PrintService(artikelListePfad);
+
+            var apiBase = ConfigurationManager.AppSettings["ConfigApiBaseUrl"];
+            _configurationService = new ConfigurationApiService(apiBase);
 
             // Füge die Buttons hinzu, die deaktiviert werden sollen (außer dem Suche-Button)
             buttonsToDisable.Add(tasteHoch);
@@ -104,6 +111,18 @@ namespace Label_Drucker
 
                 //Sortiere die Einträge
                 statAuftrag.Positions = SortingPosition(order);
+
+                // Beispiel: Hole Konfigurationsdaten für die erste Position
+                if (order.Positions != null && order.Positions.Length > 0)
+                {
+                    var configId = order.Positions[0].ConfigurationId;
+                    if (!string.IsNullOrEmpty(configId))
+                    {
+                        _lastConfigurationData = _configurationService.GetConfigurationData(auftragsNummer, configId);
+                        if (!string.IsNullOrEmpty(_lastConfigurationData))
+                            MessageBox.Show(_lastConfigurationData, "Konfigurationsdaten");
+                    }
+                }
 
                 // Unterbreche die Funktion, wenn die aktuelle Eingabe ungültig ist
                 if (!CheckAuftrag(order))
