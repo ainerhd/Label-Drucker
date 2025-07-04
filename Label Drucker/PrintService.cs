@@ -10,6 +10,7 @@ namespace Label_Drucker.Services
 {
     /// <summary>
     /// Serviceklasse zur Kapselung der gesamten Drucklogik.
+    /// 
     /// </summary>
     public class PrintService
     {
