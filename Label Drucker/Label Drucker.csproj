@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC779865-B3BB-4A73-80BB-1266A8FA48BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Label_Drucker</RootNamespace>
+    <AssemblyName>Label Drucker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>Z:\1 Auma-Organisation\1.1 SCK\1.1.6 IV\IFS Auftragsetiketten\Source\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\scknetapp01\Informationen\1 Auma-Organisation\1.1 SCK\1.1.6 IV\IFS Auftragsetiketten\Source\</InstallUrl>
+    <UpdateUrl>\\scknetapp01\Informationen\1 Auma-Organisation\1.1 SCK\1.1.6 IV\IFS Auftragsetiketten\Source\</UpdateUrl>
+    <ProductName>Label Drucker</ProductName>
+    <PublisherName>Amin Bouklata</PublisherName>
+    <SuiteName>AUMA Riester</SuiteName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6C6686BFBA7428B727D864283EC45F3CE8CCA067</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Label Drucker_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuftragLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuftragLabel.Designer.cs">
+      <DependentUpon>AuftragLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SAMsphereServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Hauptmenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hauptmenue.Designer.cs">
+      <DependentUpon>Hauptmenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionLabel.Designer.cs">
+      <DependentUpon>PositionLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AuftragLabel.resx">
+      <DependentUpon>AuftragLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hauptmenue.resx">
+      <DependentUpon>Hauptmenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionLabel.resx">
+      <DependentUpon>PositionLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ACO_ApplicationConfiguration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ACO_DomainInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ACO_HostInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ActionDescriptionDO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ActionValidityDO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ADM_OrderCacheEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ADM_ServerIFS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.AUR_EncryptionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.AUR_User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.CompanyDescriptionDO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.DEL_Ladeliste.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.DEL_LadelisteKopf.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.DEL_LagerDescription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ErrorClassDO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.KAN_KanbanCard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.LifecycleEventDO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.MAC_Addressblock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.MAC_ServiceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.MANU_PickSerialResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.MANU_SerialProcessingInstruction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.MANU_WorkplaceDescription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_IfaxOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_Motor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_OrderLineInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_OrderOfDopId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_OrderWithDopTree.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_Position.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_PositionChars.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_PositionCharsTransformed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_SerialChars.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_SerialCharsTransformed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_Stator.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.ORD_SupplyChain.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.PDA_InventoryPart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.PDA_Part.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.PSFailure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.REC_Receipt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SerialCreationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SerialDO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SNA_MissingAumaSerial.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SNR_ConfigParamDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SNR_DeviceRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SNR_MeasureValueDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SNR_SerialProgressForShopOrderAndActionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SOH_Part.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SOH_ShopOrderDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SOH_ShopOrderHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.SOH_WorkplaceDescription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\Label_Drucker.SAMsphereServer.WDIA_WiringDiagramPinout.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer.wsdl" />
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Label Drucker_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SAMsphereServer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SAMsphereServer\SAMsphereServer.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SAMsphereServer\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SAMsphereServer\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SAMsphereServer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

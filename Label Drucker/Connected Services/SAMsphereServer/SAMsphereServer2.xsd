@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SAMsphere.ServiceRules" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SAMsphere.ServiceRules" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" />
+  <xs:complexType name="ArrayOfPSFailure">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSFailure" nillable="true" type="tns:PSFailure" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSFailure" nillable="true" type="tns:ArrayOfPSFailure" />
+  <xs:complexType name="PSFailure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ConfigHostName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Culture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureTimeStamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FailureTimeStampLast" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="LCEContextRef1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCEContextRef2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCEContextRef3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCEContextRef4" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="LCEContextType" type="q1:LifecycleEventContextType" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="LCEEventType" type="q2:LifecycleEventType" />
+      <xs:element minOccurs="0" name="LoginUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RetryCounter" type="xs:int" />
+      <xs:element minOccurs="0" name="SAMFamily" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Server" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSFailure" nillable="true" type="tns:PSFailure" />
+</xs:schema>

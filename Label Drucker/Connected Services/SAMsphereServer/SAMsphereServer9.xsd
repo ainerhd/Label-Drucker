@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfSerialDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SerialDO" nillable="true" type="tns:SerialDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSerialDO" nillable="true" type="tns:ArrayOfSerialDO" />
+  <xs:complexType name="SerialDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContextRef1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContextRef2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContextRef3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContextRef4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContextRefType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContextRefTypeDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CurrentBOMTopNodeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CurrentConfigurationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentMotorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentProperties" nillable="true" type="tns:ArrayOfSerialPropDO" />
+      <xs:element minOccurs="0" name="DeliveryBOMTopNodeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="DeliveryConfigurationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryDeviceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryMotorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryProperties" nillable="true" type="tns:ArrayOfSerialPropDO" />
+      <xs:element minOccurs="0" name="Format" type="xs:int" />
+      <xs:element minOccurs="0" name="IfaxMasterSiteNo" type="xs:int" />
+      <xs:element minOccurs="0" name="IfaxProject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterContextRef1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterContextRef2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterContextRef3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterContextRef4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterContextRefType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterContextRefTypeDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentPartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentSerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SerialDO" nillable="true" type="tns:SerialDO" />
+  <xs:complexType name="ArrayOfSerialPropDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SerialPropDO" nillable="true" type="tns:SerialPropDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSerialPropDO" nillable="true" type="tns:ArrayOfSerialPropDO" />
+  <xs:complexType name="SerialPropDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SerialPropDO" nillable="true" type="tns:SerialPropDO" />
+  <xs:complexType name="ArrayOfLifecycleEventDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LifecycleEventDO" nillable="true" type="tns:LifecycleEventDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLifecycleEventDO" nillable="true" type="tns:ArrayOfLifecycleEventDO" />
+  <xs:complexType name="LifecycleEventDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EventRef1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRef2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRef3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRef4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRefType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRefTypeDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventType" type="xs:int" />
+      <xs:element minOccurs="0" name="EventTypeLongDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventTypeShortDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsClosed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LifecycleEventId" type="xs:long" />
+      <xs:element minOccurs="0" name="ListActions" nillable="true" type="tns:ArrayOfActionDO" />
+      <xs:element minOccurs="0" name="ListConfigParameters" nillable="true" type="tns:ArrayOfConfigParamDO" />
+      <xs:element minOccurs="0" name="ListMeasureValues" nillable="true" type="tns:ArrayOfMeasureValueDO" />
+      <xs:element minOccurs="0" name="ListProcessSteps" nillable="true" type="tns:ArrayOfProcessStepDO" />
+      <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PartDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessState" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessStateDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessStopChange" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProcessStopError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProcessStopQuality" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LifecycleEventDO" nillable="true" type="tns:LifecycleEventDO" />
+  <xs:complexType name="ArrayOfActionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionDO" nillable="true" type="tns:ActionDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionDO" nillable="true" type="tns:ArrayOfActionDO" />
+  <xs:complexType name="ActionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ActionParam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfErrorDO" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="LifecycleEventId" type="xs:long" />
+      <xs:element minOccurs="0" name="SiteLongDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteNo" type="xs:int" />
+      <xs:element minOccurs="0" name="SiteShortDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Workstation" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionDO" nillable="true" type="tns:ActionDO" />
+  <xs:complexType name="ArrayOfErrorDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorDO" nillable="true" type="tns:ErrorDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorDO" nillable="true" type="tns:ArrayOfErrorDO" />
+  <xs:complexType name="ErrorDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorClassNo" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorClassNoDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorGroupNo" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorGroupNoDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorNo" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDO" nillable="true" type="tns:ErrorDO" />
+  <xs:complexType name="ArrayOfConfigParamDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigParamDO" nillable="true" type="tns:ConfigParamDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigParamDO" nillable="true" type="tns:ArrayOfConfigParamDO" />
+  <xs:complexType name="ConfigParamDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LifecycleEventId" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigParamDO" nillable="true" type="tns:ConfigParamDO" />
+  <xs:complexType name="ArrayOfMeasureValueDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MeasureValueDO" nillable="true" type="tns:MeasureValueDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMeasureValueDO" nillable="true" type="tns:ArrayOfMeasureValueDO" />
+  <xs:complexType name="MeasureValueDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LifecycleEventId" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MeasureValueDO" nillable="true" type="tns:MeasureValueDO" />
+  <xs:complexType name="ArrayOfProcessStepDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProcessStepDO" nillable="true" type="tns:ProcessStepDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcessStepDO" nillable="true" type="tns:ArrayOfProcessStepDO" />
+  <xs:complexType name="ProcessStepDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ActionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ActionParameter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanDoNext" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Impossible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LifecycleEventId" type="xs:long" />
+      <xs:element minOccurs="0" name="Once" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Optional" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Post" nillable="true" type="q1:ArrayOfint" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pre" nillable="true" type="q2:ArrayOfint" />
+      <xs:element minOccurs="0" name="RuleRuntime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDoNext" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessStepDO" nillable="true" type="tns:ProcessStepDO" />
+  <xs:simpleType name="LifecycleEventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Production" />
+      <xs:enumeration value="ServiceEntry" />
+      <xs:enumeration value="ServiceExit" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LifecycleEventType" nillable="true" type="tns:LifecycleEventType" />
+  <xs:simpleType name="LifecycleEventContextType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ShopOrder" />
+      <xs:enumeration value="WorkTask" />
+      <xs:enumeration value="IfaxProduction" />
+      <xs:enumeration value="IfaxService" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LifecycleEventContextType" nillable="true" type="tns:LifecycleEventContextType" />
+  <xs:complexType name="ActionValidityDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ActionParam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionParamInProcess" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRef1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRef2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRef3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRef4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventRefType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventType" type="xs:int" />
+      <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionValidityDO" nillable="true" type="tns:ActionValidityDO" />
+  <xs:complexType name="ArrayOfCompanyDescriptionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyDescriptionDO" nillable="true" type="tns:CompanyDescriptionDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyDescriptionDO" nillable="true" type="tns:ArrayOfCompanyDescriptionDO" />
+  <xs:complexType name="CompanyDescriptionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyDescriptionDO" nillable="true" type="tns:CompanyDescriptionDO" />
+  <xs:complexType name="ArrayOfErrorClassDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorClassDO" nillable="true" type="tns:ErrorClassDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorClassDO" nillable="true" type="tns:ArrayOfErrorClassDO" />
+  <xs:complexType name="ErrorClassDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfErrorGroupDO" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorClassDO" nillable="true" type="tns:ErrorClassDO" />
+  <xs:complexType name="ArrayOfErrorGroupDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorGroupDO" nillable="true" type="tns:ErrorGroupDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorGroupDO" nillable="true" type="tns:ArrayOfErrorGroupDO" />
+  <xs:complexType name="ErrorGroupDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfErrorDescriptionDO" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorGroupDO" nillable="true" type="tns:ErrorGroupDO" />
+  <xs:complexType name="ArrayOfErrorDescriptionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorDescriptionDO" nillable="true" type="tns:ErrorDescriptionDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorDescriptionDO" nillable="true" type="tns:ArrayOfErrorDescriptionDO" />
+  <xs:complexType name="ErrorDescriptionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDescriptionDO" nillable="true" type="tns:ErrorDescriptionDO" />
+  <xs:complexType name="ArrayOfActionDescriptionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionDescriptionDO" nillable="true" type="tns:ActionDescriptionDO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionDescriptionDO" nillable="true" type="tns:ArrayOfActionDescriptionDO" />
+  <xs:complexType name="ActionDescriptionDO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="AllowedForProduction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllowedForService" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionDescriptionDO" nillable="true" type="tns:ActionDescriptionDO" />
+</xs:schema>

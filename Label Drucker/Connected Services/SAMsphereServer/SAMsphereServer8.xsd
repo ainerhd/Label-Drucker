@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SAMsphere" />
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" />
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SAM.Serials" />
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/SAMsphere.ServiceRules" />
+  <xs:element name="Admin_TestAlive">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_TestAliveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Admin_TestAliveResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_IsTestEnvironment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_IsTestEnvironmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Admin_IsTestEnvironmentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_ServiceRestart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_ServiceRestartResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_StatistikProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_StatistikProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Admin_StatistikProviderResult" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_StatistikRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="provider" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_StatistikReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Admin_StatistikReadResult" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_StatistikReset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="provider" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_StatistikResetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_ServerListIFS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_ServerListIFSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="Admin_ServerListIFSResult" nillable="true" type="q3:ArrayOfADM_ServerIFS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_OrderCacheClear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_OrderCacheClearResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_OrderCacheRemove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_OrderCacheRemoveResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_OrderCacheList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Admin_OrderCacheListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="Admin_OrderCacheListResult" nillable="true" type="q4:ArrayOfADM_OrderCacheEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_GetHostInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="physicalHostname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_GetHostInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ACO_GetHostInformationResult" nillable="true" type="q5:ACO_HostInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_GetDomainList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_GetDomainListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ACO_GetDomainListResult" nillable="true" type="q6:ArrayOfACO_DomainInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationByHost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="physicalHostname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationByHostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ACO_LoadApplicationConfigurationByHostResult" nillable="true" type="q7:ACO_ApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationsByHost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="applicationNames" nillable="true" type="q8:ArrayOfstring" />
+        <xs:element minOccurs="0" name="physicalHostname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationsByHostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ACO_LoadApplicationConfigurationsByHostResult" nillable="true" type="q9:ACO_ApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationByDomain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="domainId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationByDomainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ACO_LoadApplicationConfigurationByDomainResult" nillable="true" type="q10:ACO_ApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationsByDomain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="applicationNames" nillable="true" type="q11:ArrayOfstring" />
+        <xs:element minOccurs="0" name="domainId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_LoadApplicationConfigurationsByDomainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ACO_LoadApplicationConfigurationsByDomainResult" nillable="true" type="q12:ACO_ApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_SetHostOverride">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="physicalHostname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="configParamName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newEnabledValue" type="xs:boolean" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ACO_SetHostOverrideResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_GetUserListByRight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rightName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_GetUserListByRightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="AUR_GetUserListByRightResult" nillable="true" type="q13:ArrayOfAUR_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_GetUserById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_GetUserByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="AUR_GetUserByIdResult" nillable="true" type="q14:AUR_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_GetUserByWinLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="winLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_GetUserByWinLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="AUR_GetUserByWinLoginResult" nillable="true" type="q15:AUR_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_AuthenticateByPW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_AuthenticateByPWResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="AUR_AuthenticateByPWResult" nillable="true" type="q16:AUR_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_AuthenticateByEID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="encryptedID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_AuthenticateByEIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="AUR_AuthenticateByEIDResult" nillable="true" type="q17:AUR_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_AuthenticateByRFID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_AuthenticateByRFIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="AUR_AuthenticateByRFIDResult" nillable="true" type="q18:AUR_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_PasswordChange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="oldPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_PasswordChangeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_EncryptPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUR_EncryptPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="AUR_EncryptPasswordResult" nillable="true" type="q19:AUR_EncryptionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_GetLagerDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idLager" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_GetLagerDescriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="DEL_GetLagerDescriptionResult" nillable="true" type="q20:DEL_LagerDescription" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_GetLadelisten">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="warehouseId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_GetLadelistenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="DEL_GetLadelistenResult" nillable="true" type="q21:ArrayOfDEL_LadelisteKopf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_GetLadeliste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idLadeliste" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_GetLadelisteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="DEL_GetLadelisteResult" nillable="true" type="q22:DEL_Ladeliste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_PackstückAusliefern">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idLadeliste" type="xs:long" />
+        <xs:element minOccurs="0" name="idPackstück" type="xs:long" />
+        <xs:element minOccurs="0" name="mitarbeiter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_PackstückAusliefernResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="DEL_PackstückAusliefernResult" nillable="true" type="q23:DEL_LadelisteKopf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_PackstückRücknehmen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idLadeliste" type="xs:long" />
+        <xs:element minOccurs="0" name="idPackstück" type="xs:long" />
+        <xs:element minOccurs="0" name="mitarbeiter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_PackstückRücknehmenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="DEL_PackstückRücknehmenResult" nillable="true" type="q24:DEL_LadelisteKopf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_PackstückBewegen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPackstück" type="xs:long" />
+        <xs:element minOccurs="0" name="lagerPlatz" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mitarbeiter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_PackstückBewegenResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_LadelisteAbschliessen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idLadeliste" type="xs:long" />
+        <xs:element minOccurs="0" name="endgueltig" type="xs:boolean" />
+        <xs:element minOccurs="0" name="kommentar" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mitarbeiter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_LadelisteAbschliessenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="DEL_LadelisteAbschliessenResult" nillable="true" type="q25:DEL_LadelisteKopf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_LadelisteFortfahren">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idLadeliste" type="xs:long" />
+        <xs:element minOccurs="0" name="mitarbeiter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DEL_LadelisteFortfahrenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="DEL_LadelisteFortfahrenResult" nillable="true" type="q26:DEL_LadelisteKopf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KAN_ReadKanbanCards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="resourceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cardStatusCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="circuitStatusCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KAN_ReadKanbanCardsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="KAN_ReadKanbanCardsResult" nillable="true" type="q27:ArrayOfKAN_KanbanCard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAC_AllocateAddressBlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addressPoolId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blockLength" type="xs:unsignedInt" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAC_AllocateAddressBlockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="MAC_AllocateAddressBlockResult" nillable="true" type="q28:MAC_Addressblock" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAC_GetServiceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAC_GetServiceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="MAC_GetServiceInfoResult" nillable="true" type="q29:MAC_ServiceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MANU_GetWorkplaceDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="site" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workplaceName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MANU_GetWorkplaceDescriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="MANU_GetWorkplaceDescriptionResult" nillable="true" type="q30:MANU_WorkplaceDescription" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MANU_PickSerialNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderReleaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderSequenceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MANU_PickSerialNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="MANU_PickSerialNumberResult" nillable="true" type="q31:MANU_PickSerialResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MANU_GetSerialProcessingInstruction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="site" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workplaceName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MANU_GetSerialProcessingInstructionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="MANU_GetSerialProcessingInstructionResult" nillable="true" type="q32:MANU_SerialProcessingInstruction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderLineInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="positionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderLineInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_OrderLineInfoResult" nillable="true" type="q33:ORD_OrderLineInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderPositionsByParentDopId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parentDopId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="readFromCache" type="xs:boolean" />
+        <xs:element minOccurs="0" name="storeInCache" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderPositionsByParentDopIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_OrderPositionsByParentDopIdResult" nillable="true" type="q34:ArrayOfORD_Position" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderNoByDopId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dopId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderNoByDopIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_OrderNoByDopIdResult" nillable="true" type="q35:ORD_OrderOfDopId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="readFromCache" type="xs:boolean" />
+        <xs:element minOccurs="0" name="storeInCache" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_OrderResult" nillable="true" type="q36:ORD_Order" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderWithDopTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="readFromCache" type="xs:boolean" />
+        <xs:element minOccurs="0" name="storeInCache" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_OrderWithDopTreeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_OrderWithDopTreeResult" nillable="true" type="q37:ORD_OrderWithDopTree" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_IfaxOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" type="xs:decimal" />
+        <xs:element minOccurs="0" name="readFromCache" type="xs:boolean" />
+        <xs:element minOccurs="0" name="storeInCache" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_IfaxOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_IfaxOrderResult" nillable="true" type="q38:ORD_IfaxOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_PositionChars">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="positionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="readFromCache" type="xs:boolean" />
+        <xs:element minOccurs="0" name="storeInCache" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_PositionCharsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_PositionCharsResult" nillable="true" type="q39:ORD_PositionChars" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_PositionCharsTransformed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="positionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transformationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="readFromCache" type="xs:boolean" />
+        <xs:element minOccurs="0" name="storeInCache" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_PositionCharsTransformedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_PositionCharsTransformedResult" nillable="true" type="q40:ORD_PositionCharsTransformed" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_PositionMotorData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="positionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="readFromCache" type="xs:boolean" />
+        <xs:element minOccurs="0" name="storeInCache" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_PositionMotorDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_PositionMotorDataResult" nillable="true" type="q41:ORD_Motor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_SupplyChain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="positionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_SupplyChainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_SupplyChainResult" nillable="true" type="q42:ORD_SupplyChain" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_SerialChars">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currentData" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_SerialCharsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_SerialCharsResult" nillable="true" type="q43:ORD_SerialChars" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_SerialCharsTransformed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currentData" type="xs:boolean" />
+        <xs:element minOccurs="0" name="transformationName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_SerialCharsTransformedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_SerialCharsTransformedResult" nillable="true" type="q44:ORD_SerialCharsTransformed" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_ArticleMotorData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="articleNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_ArticleMotorDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_ArticleMotorDataResult" nillable="true" type="q45:ORD_Motor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_IdMotorData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_IdMotorDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_IdMotorDataResult" nillable="true" type="q46:ORD_Motor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_IdStatorData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ORD_ERP_IdStatorDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="ORD_ERP_IdStatorDataResult" nillable="true" type="q47:ORD_Stator" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PDA_ReadPart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PDA_ReadPartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="PDA_ReadPartResult" nillable="true" type="q48:PDA_Part" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PDA_ReadInventoryPart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PDA_ReadInventoryPartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="PDA_ReadInventoryPartResult" nillable="true" type="q49:PDA_InventoryPart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REC_ReadReceiptsForPurchaseOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseOrderNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REC_ReadReceiptsForPurchaseOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="REC_ReadReceiptsForPurchaseOrderResult" nillable="true" type="q50:ArrayOfREC_Receipt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_SerialsReadClusterResult" nillable="true" type="q51:ArrayOfSerialDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromContextBySerial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="expandedContext" type="xs:boolean" />
+        <xs:element minOccurs="0" name="serial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromContextBySerialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_SerialsReadFromContextBySerialResult" nillable="true" type="q52:ArrayOfSerialDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromMasterContextBySerial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="expandedContext" type="xs:boolean" />
+        <xs:element minOccurs="0" name="serial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromMasterContextBySerialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_SerialsReadFromMasterContextBySerialResult" nillable="true" type="q53:ArrayOfSerialDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/SAM.Serials" minOccurs="0" name="contextRefType" type="q54:SerialContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_SerialsReadFromContextResult" nillable="true" type="q55:ArrayOfSerialDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromMasterContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/SAM.Serials" minOccurs="0" name="contextRefType" type="q56:SerialContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_SerialsReadFromMasterContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_SerialsReadFromMasterContextResult" nillable="true" type="q57:ArrayOfSerialDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_LifecycleEventsOverview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_LifecycleEventsOverviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_LifecycleEventsOverviewResult" nillable="true" type="q58:ArrayOfLifecycleEventDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_LifecycleEventData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lifecycleEventId" type="xs:long" />
+        <xs:element minOccurs="0" name="readActions" type="xs:boolean" />
+        <xs:element minOccurs="0" name="readProcess" type="xs:boolean" />
+        <xs:element minOccurs="0" name="readMeasures" type="xs:boolean" />
+        <xs:element minOccurs="0" name="readConfigs" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_LifecycleEventDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_LifecycleEventDataResult" nillable="true" type="q59:LifecycleEventDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ActionWrite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="eventType" type="q60:LifecycleEventType" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="contextRefType" type="q61:LifecycleEventContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actionNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="actionParam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+        <xs:element xmlns:q62="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="errors" nillable="true" type="q62:ArrayOfint" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="measureValues" nillable="true" type="q63:ArrayOfKeyValuePairOfstringstring" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="configParams" nillable="true" type="q64:ArrayOfKeyValuePairOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ActionWriteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_ActionWriteResult" nillable="true" type="q65:ActionValidityDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ActionCanWrite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="eventType" type="q66:LifecycleEventType" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="contextRefType" type="q67:LifecycleEventContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actionNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="actionParam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ActionCanWriteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_ActionCanWriteResult" nillable="true" type="q68:ActionValidityDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AssemblyWrite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNoParent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNoParent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNoChild" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNoChild" nillable="true" type="xs:string" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="eventType" type="q69:LifecycleEventType" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="contextRefType" type="q70:LifecycleEventContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AssemblyWriteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_AssemblyWriteResult" nillable="true" type="q71:ActionValidityDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AssemblyCanWrite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNoParent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNoParent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNoChild" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNoChild" nillable="true" type="xs:string" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="eventType" type="q72:LifecycleEventType" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="contextRefType" type="q73:LifecycleEventContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AssemblyCanWriteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_AssemblyCanWriteResult" nillable="true" type="q74:ActionValidityDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ErrorReplace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idOldError" type="xs:long" />
+        <xs:element minOccurs="0" name="numberNewError" type="xs:int" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ErrorReplaceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_DeviceRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderLineNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderDelNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_DeviceReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNR_DeviceReadResult" nillable="true" type="q75:ArrayOfSNR_DeviceRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ConnectToDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deviceId" nillable="true" type="xs:long" />
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="eventType" type="q76:LifecycleEventType" />
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="contextRefType" type="q77:LifecycleEventContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ConnectToDeviceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_DisconnectFromDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="eventType" type="q78:LifecycleEventType" />
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="contextRefType" type="q79:LifecycleEventContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_DisconnectFromDeviceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_DeliveryDeviceSpecificCharacteristic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="characteristicName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_DeliveryDeviceSpecificCharacteristicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SNR_DeliveryDeviceSpecificCharacteristicResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ReadSerialProgressOnShopOrderAndAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderReleaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderSequenceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actionNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="actionParameter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ReadSerialProgressOnShopOrderAndActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNR_ReadSerialProgressOnShopOrderAndActionResult" nillable="true" type="q80:SNR_SerialProgressForShopOrderAndActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_CompanyCatalogRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_CompanyCatalogReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_CompanyCatalogReadResult" nillable="true" type="q81:ArrayOfCompanyDescriptionDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_CompanyCatalogRefresh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_CompanyCatalogRefreshResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ErrorCatalogRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ErrorCatalogReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_ErrorCatalogReadResult" nillable="true" type="q82:ArrayOfErrorClassDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ErrorCatalogRefresh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ErrorCatalogRefreshResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AktionDefinitionRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AktionDefinitionReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="SNR_AktionDefinitionReadResult" nillable="true" type="q83:ArrayOfActionDescriptionDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AktionDefinitionRefresh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_AktionDefinitionRefreshResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ConfigParamDefinitionRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ConfigParamDefinitionReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNR_ConfigParamDefinitionReadResult" nillable="true" type="q84:ArrayOfSNR_ConfigParamDefinition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_MeasureValueDefinitionRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_MeasureValueDefinitionReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNR_MeasureValueDefinitionReadResult" nillable="true" type="q85:ArrayOfSNR_MeasureValueDefinition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ConfigParamDefinitionWrite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="configParams" nillable="true" type="q86:ArrayOfSNR_ConfigParamDefinition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNR_ConfigParamDefinitionWriteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_ReadMissingAumaSerialsFromSNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderLineNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderDelNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxNumberOfRecords" type="xs:int" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_ReadMissingAumaSerialsFromSNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNA_ReadMissingAumaSerialsFromSNRResult" nillable="true" type="q87:ArrayOfSNA_MissingAumaSerial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_ReadMissingAumaSerialsFromPSC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxNumberOfRecords" type="xs:int" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_ReadMissingAumaSerialsFromPSCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNA_ReadMissingAumaSerialsFromPSCResult" nillable="true" type="q88:ArrayOfSNA_MissingAumaSerial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_CreateMissingAumaSerialsFromSNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderLineNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderDelNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxNumberOfRecords" type="xs:int" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_CreateMissingAumaSerialsFromSNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNA_CreateMissingAumaSerialsFromSNRResult" nillable="true" type="q89:ArrayOfSerialCreationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_CreateMissingAumaSerialsFromPSC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxNumberOfRecords" type="xs:int" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_CreateMissingAumaSerialsFromPSCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SNA_CreateMissingAumaSerialsFromPSCResult" nillable="true" type="q90:ArrayOfSerialCreationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_CreateSerialNumberProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="samFamily" nillable="true" type="xs:string" />
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="eventType" type="q91:LifecycleEventType" />
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" minOccurs="0" name="contextRefType" type="q92:LifecycleEventContextType" />
+        <xs:element minOccurs="0" name="contextRef1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contextRef4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyCode" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workstation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_CreateSerialNumberProcessResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_GetSerialNumbersWithFailedProcessSteps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="special" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SNA_GetSerialNumbersWithFailedProcessStepsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/SAMsphere.ServiceRules" minOccurs="0" name="SNA_GetSerialNumbersWithFailedProcessStepsResult" nillable="true" type="q93:ArrayOfPSFailure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_ReadWorkplaceDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workplaceNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_ReadWorkplaceDescriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SOH_ReadWorkplaceDescriptionResult" nillable="true" type="q94:SOH_WorkplaceDescription" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_ReadShopOrderList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workplaceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderReleaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderSequenceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="needDateStart" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="needDateEnd" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="setNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dopId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderLineNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderDelNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_ReadShopOrderListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SOH_ReadShopOrderListResult" nillable="true" type="q95:ArrayOfSOH_ShopOrderHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_ReadShopOrderDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderReleaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderSequenceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currentWorkplaceNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_ReadShopOrderDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SOH_ReadShopOrderDetailsResult" nillable="true" type="q96:SOH_ShopOrderDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_WriteShopOrderConfirmation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderReleaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderSequenceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_WriteShopOrderConfirmationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SOH_WriteShopOrderConfirmationResult" nillable="true" type="q97:SOH_ShopOrderHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_WriteShopOrderOperationConfirmation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderReleaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderSequenceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderOperationNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_WriteShopOrderOperationConfirmationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SOH_WriteShopOrderOperationConfirmationResult" nillable="true" type="q98:SOH_ShopOrderHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_WriteShopOrderComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderReleaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shopOrderSequenceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newComment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_WriteShopOrderCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SOH_WriteShopOrderCommentResult" nillable="true" type="q99:SOH_ShopOrderHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_PartListTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderLineNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderDelNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOH_PartListTreeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="SOH_PartListTreeResult" nillable="true" type="q100:SOH_Part" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WDIA_ReadWiringDiagramPinouts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="culture" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="server" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wiringDiagramNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WDIA_ReadWiringDiagramPinoutsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/SAMsphere" minOccurs="0" name="WDIA_ReadWiringDiagramPinoutsResult" nillable="true" type="q101:ArrayOfWDIA_WiringDiagramPinout" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,2549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="SAMsphereServer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SAMsphere" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SAMsphere.ServiceShopOrder" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SAM.Serials.DataObjects" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SAM.Serials" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/SAMsphere.ServiceRules" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISAMsphere_Admin_TestAlive_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_TestAlive" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_TestAlive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_TestAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_TestAlive_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q1:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_IsTestEnvironment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_IsTestEnvironment" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_IsTestEnvironment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_IsTestEnvironmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_IsTestEnvironment_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q2:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_ServiceRestart_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_ServiceRestart" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_ServiceRestart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_ServiceRestartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_ServiceRestart_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q3:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_StatistikProvider" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_StatistikProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikProvider_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q4:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_StatistikRead" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_StatistikReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikRead_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q5:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikReset_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_StatistikReset" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikReset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_StatistikResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_StatistikReset_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q6:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_ServerListIFS_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_ServerListIFS" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_ServerListIFS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_ServerListIFSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_ServerListIFS_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q7:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheClear_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_OrderCacheClear" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheClear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_OrderCacheClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheClear_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q8:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheRemove_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_OrderCacheRemove" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheRemove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_OrderCacheRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheRemove_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q9:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_OrderCacheList" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Admin_OrderCacheListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_Admin_OrderCacheList_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q10:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_GetHostInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_GetHostInformation" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_GetHostInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_GetHostInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_GetHostInformation_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q11:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_GetDomainList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_GetDomainList" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_GetDomainList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_GetDomainListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_GetDomainList_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q12:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationByHost_InputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationByHost" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationByHost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationByHostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationByHost_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q13:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationsByHost_InputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationsByHost" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationsByHost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationsByHostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationsByHost_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q14:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationByDomain_InputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationByDomain" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationByDomain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationByDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationByDomain_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q15:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationsByDomain_InputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationsByDomain" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationsByDomain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_LoadApplicationConfigurationsByDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_LoadApplicationConfigurationsByDomain_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q16:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_SetHostOverride_InputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_SetHostOverride" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_SetHostOverride_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ACO_SetHostOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ACO_SetHostOverride_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q17:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserListByRight_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_GetUserListByRight" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserListByRight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_GetUserListByRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserListByRight_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q18:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserById_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q19:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserByWinLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_GetUserByWinLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserByWinLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_GetUserByWinLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_GetUserByWinLogin_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q20:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByPW_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_AuthenticateByPW" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByPW_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_AuthenticateByPWResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByPW_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q21:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByEID_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_AuthenticateByEID" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByEID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_AuthenticateByEIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByEID_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q22:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByRFID_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_AuthenticateByRFID" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByRFID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_AuthenticateByRFIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_AuthenticateByRFID_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q23:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_PasswordChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_PasswordChange" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_PasswordChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_PasswordChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_PasswordChange_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q24:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_EncryptPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_EncryptPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_EncryptPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AUR_EncryptPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_AUR_EncryptPassword_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q25:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLagerDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_GetLagerDescription" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLagerDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_GetLagerDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLagerDescription_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q26:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLadelisten_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_GetLadelisten" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLadelisten_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_GetLadelistenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLadelisten_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q27:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLadeliste_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_GetLadeliste" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLadeliste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_GetLadelisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_GetLadeliste_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q28:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückAusliefern_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_PackstückAusliefern" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückAusliefern_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_PackstückAusliefernResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückAusliefern_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q29:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückRücknehmen_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_PackstückRücknehmen" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückRücknehmen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_PackstückRücknehmenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückRücknehmen_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q30:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückBewegen_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_PackstückBewegen" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückBewegen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_PackstückBewegenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_PackstückBewegen_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q31:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_LadelisteAbschliessen_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_LadelisteAbschliessen" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_LadelisteAbschliessen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_LadelisteAbschliessenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_LadelisteAbschliessen_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q32:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_LadelisteFortfahren_InputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_LadelisteFortfahren" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_LadelisteFortfahren_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DEL_LadelisteFortfahrenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_DEL_LadelisteFortfahren_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q33:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_KAN_ReadKanbanCards_InputMessage">
+    <wsdl:part name="parameters" element="tns:KAN_ReadKanbanCards" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_KAN_ReadKanbanCards_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KAN_ReadKanbanCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_KAN_ReadKanbanCards_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q34:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MAC_AllocateAddressBlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:MAC_AllocateAddressBlock" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MAC_AllocateAddressBlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MAC_AllocateAddressBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MAC_AllocateAddressBlock_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q35:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MAC_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:MAC_GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MAC_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MAC_GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MAC_GetServiceInfo_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q36:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_GetWorkplaceDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:MANU_GetWorkplaceDescription" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_GetWorkplaceDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MANU_GetWorkplaceDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_GetWorkplaceDescription_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q37:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_PickSerialNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:MANU_PickSerialNumber" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_PickSerialNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MANU_PickSerialNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_PickSerialNumber_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q38:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_GetSerialProcessingInstruction_InputMessage">
+    <wsdl:part name="parameters" element="tns:MANU_GetSerialProcessingInstruction" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_GetSerialProcessingInstruction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MANU_GetSerialProcessingInstructionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_MANU_GetSerialProcessingInstruction_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q39:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderLineInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderLineInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderLineInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderLineInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderLineInfo_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q40:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderPositionsByParentDopId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderPositionsByParentDopId" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderPositionsByParentDopId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderPositionsByParentDopIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderPositionsByParentDopId_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q41:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderNoByDopId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderNoByDopId" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderNoByDopId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderNoByDopIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderNoByDopId_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q42:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_Order_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_Order" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_Order_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_Order_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q43:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderWithDopTree_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderWithDopTree" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderWithDopTree_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_OrderWithDopTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_OrderWithDopTree_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q44:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IfaxOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_IfaxOrder" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IfaxOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_IfaxOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IfaxOrder_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q45:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionChars_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_PositionChars" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionChars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_PositionCharsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionChars_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q46:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionCharsTransformed_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_PositionCharsTransformed" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionCharsTransformed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_PositionCharsTransformedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionCharsTransformed_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q47:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionMotorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_PositionMotorData" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionMotorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_PositionMotorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_PositionMotorData_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q48:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SupplyChain_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_SupplyChain" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SupplyChain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_SupplyChainResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SupplyChain_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q49:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SerialChars_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_SerialChars" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SerialChars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_SerialCharsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SerialChars_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q50:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SerialCharsTransformed_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_SerialCharsTransformed" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SerialCharsTransformed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_SerialCharsTransformedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_SerialCharsTransformed_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q51:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_ArticleMotorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_ArticleMotorData" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_ArticleMotorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_ArticleMotorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_ArticleMotorData_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q52:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IdMotorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_IdMotorData" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IdMotorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_IdMotorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IdMotorData_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q53:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IdStatorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_IdStatorData" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IdStatorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ORD_ERP_IdStatorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_ORD_ERP_IdStatorData_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q54:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_PDA_ReadPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:PDA_ReadPart" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_PDA_ReadPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PDA_ReadPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_PDA_ReadPart_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q55:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_PDA_ReadInventoryPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:PDA_ReadInventoryPart" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_PDA_ReadInventoryPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PDA_ReadInventoryPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_PDA_ReadInventoryPart_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q56:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_REC_ReadReceiptsForPurchaseOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:REC_ReadReceiptsForPurchaseOrder" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_REC_ReadReceiptsForPurchaseOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:REC_ReadReceiptsForPurchaseOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_REC_ReadReceiptsForPurchaseOrder_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q57:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadCluster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadCluster" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadCluster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadClusterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadCluster_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q58:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromContextBySerial_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromContextBySerial" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromContextBySerial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromContextBySerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromContextBySerial_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q59:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromMasterContextBySerial_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromMasterContextBySerial" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromMasterContextBySerial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromMasterContextBySerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromMasterContextBySerial_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q60:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromContext" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromContext_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q61:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromMasterContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromMasterContext" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromMasterContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_SerialsReadFromMasterContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_SerialsReadFromMasterContext_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q62:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_LifecycleEventsOverview_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_LifecycleEventsOverview" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_LifecycleEventsOverview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_LifecycleEventsOverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_LifecycleEventsOverview_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q63:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_LifecycleEventData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_LifecycleEventData" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_LifecycleEventData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_LifecycleEventDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_LifecycleEventData_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q64:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ActionWrite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ActionWrite" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ActionWrite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ActionWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ActionWrite_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q65:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ActionCanWrite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ActionCanWrite" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ActionCanWrite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ActionCanWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ActionCanWrite_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q66:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AssemblyWrite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AssemblyWrite" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AssemblyWrite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AssemblyWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AssemblyWrite_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q67:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AssemblyCanWrite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AssemblyCanWrite" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AssemblyCanWrite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AssemblyCanWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AssemblyCanWrite_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q68:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorReplace_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ErrorReplace" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorReplace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ErrorReplaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorReplace_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q69:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DeviceRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_DeviceRead" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DeviceRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_DeviceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DeviceRead_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q70:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConnectToDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ConnectToDevice" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConnectToDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ConnectToDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConnectToDevice_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q71:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DisconnectFromDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_DisconnectFromDevice" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DisconnectFromDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_DisconnectFromDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DisconnectFromDevice_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q72:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DeliveryDeviceSpecificCharacteristic_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_DeliveryDeviceSpecificCharacteristic" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DeliveryDeviceSpecificCharacteristic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_DeliveryDeviceSpecificCharacteristicResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_DeliveryDeviceSpecificCharacteristic_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q73:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ReadSerialProgressOnShopOrderAndAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ReadSerialProgressOnShopOrderAndAction" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ReadSerialProgressOnShopOrderAndAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ReadSerialProgressOnShopOrderAndActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ReadSerialProgressOnShopOrderAndAction_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q74:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_CompanyCatalogRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_CompanyCatalogRead" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_CompanyCatalogRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_CompanyCatalogReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_CompanyCatalogRead_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q75:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_CompanyCatalogRefresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_CompanyCatalogRefresh" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_CompanyCatalogRefresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_CompanyCatalogRefreshResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_CompanyCatalogRefresh_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q76:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorCatalogRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ErrorCatalogRead" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorCatalogRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ErrorCatalogReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorCatalogRead_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q77:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorCatalogRefresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ErrorCatalogRefresh" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorCatalogRefresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ErrorCatalogRefreshResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ErrorCatalogRefresh_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q78:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AktionDefinitionRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AktionDefinitionRead" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AktionDefinitionRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AktionDefinitionReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AktionDefinitionRead_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q79:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AktionDefinitionRefresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AktionDefinitionRefresh" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AktionDefinitionRefresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_AktionDefinitionRefreshResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_AktionDefinitionRefresh_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q80:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConfigParamDefinitionRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ConfigParamDefinitionRead" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConfigParamDefinitionRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ConfigParamDefinitionReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConfigParamDefinitionRead_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q81:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_MeasureValueDefinitionRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_MeasureValueDefinitionRead" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_MeasureValueDefinitionRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_MeasureValueDefinitionReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_MeasureValueDefinitionRead_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q82:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConfigParamDefinitionWrite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ConfigParamDefinitionWrite" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConfigParamDefinitionWrite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNR_ConfigParamDefinitionWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNR_ConfigParamDefinitionWrite_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q83:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_ReadMissingAumaSerialsFromSNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_ReadMissingAumaSerialsFromSNR" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_ReadMissingAumaSerialsFromSNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_ReadMissingAumaSerialsFromSNRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_ReadMissingAumaSerialsFromSNR_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q84:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_ReadMissingAumaSerialsFromPSC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_ReadMissingAumaSerialsFromPSC" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_ReadMissingAumaSerialsFromPSC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_ReadMissingAumaSerialsFromPSCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_ReadMissingAumaSerialsFromPSC_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q85:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateMissingAumaSerialsFromSNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_CreateMissingAumaSerialsFromSNR" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateMissingAumaSerialsFromSNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_CreateMissingAumaSerialsFromSNRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateMissingAumaSerialsFromSNR_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q86:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateMissingAumaSerialsFromPSC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_CreateMissingAumaSerialsFromPSC" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateMissingAumaSerialsFromPSC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_CreateMissingAumaSerialsFromPSCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateMissingAumaSerialsFromPSC_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q87:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateSerialNumberProcess_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_CreateSerialNumberProcess" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateSerialNumberProcess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_CreateSerialNumberProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_CreateSerialNumberProcess_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q88:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_GetSerialNumbersWithFailedProcessSteps_InputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_GetSerialNumbersWithFailedProcessSteps" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_GetSerialNumbersWithFailedProcessSteps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SNA_GetSerialNumbersWithFailedProcessStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SNA_GetSerialNumbersWithFailedProcessSteps_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q89:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadWorkplaceDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_ReadWorkplaceDescription" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadWorkplaceDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_ReadWorkplaceDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadWorkplaceDescription_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q90:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadShopOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_ReadShopOrderList" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadShopOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_ReadShopOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadShopOrderList_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q91:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadShopOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_ReadShopOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadShopOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_ReadShopOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_ReadShopOrderDetails_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q92:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderConfirmation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_WriteShopOrderConfirmation" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderConfirmation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_WriteShopOrderConfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderConfirmation_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q93:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderOperationConfirmation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_WriteShopOrderOperationConfirmation" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderOperationConfirmation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_WriteShopOrderOperationConfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderOperationConfirmation_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q94:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_WriteShopOrderComment" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_WriteShopOrderCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_WriteShopOrderComment_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q95="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q95:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_PartListTree_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_PartListTree" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_PartListTree_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOH_PartListTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_SOH_PartListTree_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q96:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_WDIA_ReadWiringDiagramPinouts_InputMessage">
+    <wsdl:part name="parameters" element="tns:WDIA_ReadWiringDiagramPinouts" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_WDIA_ReadWiringDiagramPinouts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WDIA_ReadWiringDiagramPinoutsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAMsphere_WDIA_ReadWiringDiagramPinouts_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q97="http://schemas.datacontract.org/2004/07/Auma.ServiceInterface" name="detail" element="q97:ServiceError" />
+  </wsdl:message>
+  <wsdl:portType name="ISAMsphere">
+    <wsdl:operation name="Admin_TestAlive">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_TestAlive" message="tns:ISAMsphere_Admin_TestAlive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_TestAliveResponse" message="tns:ISAMsphere_Admin_TestAlive_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_TestAliveServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_TestAlive_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_IsTestEnvironment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_IsTestEnvironment" message="tns:ISAMsphere_Admin_IsTestEnvironment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_IsTestEnvironmentResponse" message="tns:ISAMsphere_Admin_IsTestEnvironment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_IsTestEnvironmentServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_IsTestEnvironment_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_ServiceRestart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_ServiceRestart" message="tns:ISAMsphere_Admin_ServiceRestart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_ServiceRestartResponse" message="tns:ISAMsphere_Admin_ServiceRestart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_ServiceRestartServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_ServiceRestart_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_StatistikProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikProvider" message="tns:ISAMsphere_Admin_StatistikProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikProviderResponse" message="tns:ISAMsphere_Admin_StatistikProvider_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikProviderServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_StatistikProvider_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_StatistikRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikRead" message="tns:ISAMsphere_Admin_StatistikRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikReadResponse" message="tns:ISAMsphere_Admin_StatistikRead_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikReadServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_StatistikRead_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_StatistikReset">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikReset" message="tns:ISAMsphere_Admin_StatistikReset_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikResetResponse" message="tns:ISAMsphere_Admin_StatistikReset_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_StatistikResetServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_StatistikReset_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_ServerListIFS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_ServerListIFS" message="tns:ISAMsphere_Admin_ServerListIFS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_ServerListIFSResponse" message="tns:ISAMsphere_Admin_ServerListIFS_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_ServerListIFSServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_ServerListIFS_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_OrderCacheClear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheClear" message="tns:ISAMsphere_Admin_OrderCacheClear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheClearResponse" message="tns:ISAMsphere_Admin_OrderCacheClear_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheClearServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_OrderCacheClear_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_OrderCacheRemove">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheRemove" message="tns:ISAMsphere_Admin_OrderCacheRemove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheRemoveResponse" message="tns:ISAMsphere_Admin_OrderCacheRemove_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheRemoveServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_OrderCacheRemove_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Admin_OrderCacheList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheList" message="tns:ISAMsphere_Admin_OrderCacheList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheListResponse" message="tns:ISAMsphere_Admin_OrderCacheList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/Admin_OrderCacheListServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_Admin_OrderCacheList_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ACO_GetHostInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ACO_GetHostInformation" message="tns:ISAMsphere_ACO_GetHostInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ACO_GetHostInformationResponse" message="tns:ISAMsphere_ACO_GetHostInformation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ACO_GetHostInformationServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ACO_GetHostInformation_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ACO_GetDomainList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ACO_GetDomainList" message="tns:ISAMsphere_ACO_GetDomainList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ACO_GetDomainListResponse" message="tns:ISAMsphere_ACO_GetDomainList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ACO_GetDomainListServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ACO_GetDomainList_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationByHost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByHost" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationByHost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByHostResponse" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationByHost_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByHostServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationByHost_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationsByHost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByHost" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationsByHost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByHostResponse" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationsByHost_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByHostServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationsByHost_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationByDomain">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByDomain" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationByDomain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByDomainResponse" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationByDomain_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByDomainServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationByDomain_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationsByDomain">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByDomain" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationsByDomain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByDomainResponse" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationsByDomain_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByDomainServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ACO_LoadApplicationConfigurationsByDomain_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ACO_SetHostOverride">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ACO_SetHostOverride" message="tns:ISAMsphere_ACO_SetHostOverride_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ACO_SetHostOverrideResponse" message="tns:ISAMsphere_ACO_SetHostOverride_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ACO_SetHostOverrideServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ACO_SetHostOverride_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_GetUserListByRight">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserListByRight" message="tns:ISAMsphere_AUR_GetUserListByRight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserListByRightResponse" message="tns:ISAMsphere_AUR_GetUserListByRight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserListByRightServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_GetUserListByRight_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserById" message="tns:ISAMsphere_AUR_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserByIdResponse" message="tns:ISAMsphere_AUR_GetUserById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserByIdServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_GetUserById_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_GetUserByWinLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserByWinLogin" message="tns:ISAMsphere_AUR_GetUserByWinLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserByWinLoginResponse" message="tns:ISAMsphere_AUR_GetUserByWinLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_GetUserByWinLoginServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_GetUserByWinLogin_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_AuthenticateByPW">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByPW" message="tns:ISAMsphere_AUR_AuthenticateByPW_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByPWResponse" message="tns:ISAMsphere_AUR_AuthenticateByPW_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByPWServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_AuthenticateByPW_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_AuthenticateByEID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByEID" message="tns:ISAMsphere_AUR_AuthenticateByEID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByEIDResponse" message="tns:ISAMsphere_AUR_AuthenticateByEID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByEIDServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_AuthenticateByEID_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_AuthenticateByRFID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByRFID" message="tns:ISAMsphere_AUR_AuthenticateByRFID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByRFIDResponse" message="tns:ISAMsphere_AUR_AuthenticateByRFID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_AuthenticateByRFIDServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_AuthenticateByRFID_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_PasswordChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_PasswordChange" message="tns:ISAMsphere_AUR_PasswordChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_PasswordChangeResponse" message="tns:ISAMsphere_AUR_PasswordChange_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_PasswordChangeServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_PasswordChange_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUR_EncryptPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/AUR_EncryptPassword" message="tns:ISAMsphere_AUR_EncryptPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/AUR_EncryptPasswordResponse" message="tns:ISAMsphere_AUR_EncryptPassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/AUR_EncryptPasswordServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_AUR_EncryptPassword_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_GetLagerDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLagerDescription" message="tns:ISAMsphere_DEL_GetLagerDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLagerDescriptionResponse" message="tns:ISAMsphere_DEL_GetLagerDescription_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLagerDescriptionServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_GetLagerDescription_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_GetLadelisten">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLadelisten" message="tns:ISAMsphere_DEL_GetLadelisten_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLadelistenResponse" message="tns:ISAMsphere_DEL_GetLadelisten_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLadelistenServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_GetLadelisten_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_GetLadeliste">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLadeliste" message="tns:ISAMsphere_DEL_GetLadeliste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLadelisteResponse" message="tns:ISAMsphere_DEL_GetLadeliste_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_GetLadelisteServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_GetLadeliste_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_PackstückAusliefern">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückAusliefern" message="tns:ISAMsphere_DEL_PackstückAusliefern_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückAusliefernResponse" message="tns:ISAMsphere_DEL_PackstückAusliefern_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückAusliefernServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_PackstückAusliefern_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_PackstückRücknehmen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückRücknehmen" message="tns:ISAMsphere_DEL_PackstückRücknehmen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückRücknehmenResponse" message="tns:ISAMsphere_DEL_PackstückRücknehmen_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückRücknehmenServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_PackstückRücknehmen_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_PackstückBewegen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückBewegen" message="tns:ISAMsphere_DEL_PackstückBewegen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückBewegenResponse" message="tns:ISAMsphere_DEL_PackstückBewegen_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_PackstückBewegenServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_PackstückBewegen_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_LadelisteAbschliessen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_LadelisteAbschliessen" message="tns:ISAMsphere_DEL_LadelisteAbschliessen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_LadelisteAbschliessenResponse" message="tns:ISAMsphere_DEL_LadelisteAbschliessen_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_LadelisteAbschliessenServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_LadelisteAbschliessen_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DEL_LadelisteFortfahren">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/DEL_LadelisteFortfahren" message="tns:ISAMsphere_DEL_LadelisteFortfahren_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/DEL_LadelisteFortfahrenResponse" message="tns:ISAMsphere_DEL_LadelisteFortfahren_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/DEL_LadelisteFortfahrenServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_DEL_LadelisteFortfahren_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KAN_ReadKanbanCards">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/KAN_ReadKanbanCards" message="tns:ISAMsphere_KAN_ReadKanbanCards_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/KAN_ReadKanbanCardsResponse" message="tns:ISAMsphere_KAN_ReadKanbanCards_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/KAN_ReadKanbanCardsServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_KAN_ReadKanbanCards_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MAC_AllocateAddressBlock">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/MAC_AllocateAddressBlock" message="tns:ISAMsphere_MAC_AllocateAddressBlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/MAC_AllocateAddressBlockResponse" message="tns:ISAMsphere_MAC_AllocateAddressBlock_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/MAC_AllocateAddressBlockServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_MAC_AllocateAddressBlock_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MAC_GetServiceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/MAC_GetServiceInfo" message="tns:ISAMsphere_MAC_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/MAC_GetServiceInfoResponse" message="tns:ISAMsphere_MAC_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/MAC_GetServiceInfoServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_MAC_GetServiceInfo_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MANU_GetWorkplaceDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/MANU_GetWorkplaceDescription" message="tns:ISAMsphere_MANU_GetWorkplaceDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/MANU_GetWorkplaceDescriptionResponse" message="tns:ISAMsphere_MANU_GetWorkplaceDescription_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/MANU_GetWorkplaceDescriptionServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_MANU_GetWorkplaceDescription_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MANU_PickSerialNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/MANU_PickSerialNumber" message="tns:ISAMsphere_MANU_PickSerialNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/MANU_PickSerialNumberResponse" message="tns:ISAMsphere_MANU_PickSerialNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/MANU_PickSerialNumberServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_MANU_PickSerialNumber_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MANU_GetSerialProcessingInstruction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/MANU_GetSerialProcessingInstruction" message="tns:ISAMsphere_MANU_GetSerialProcessingInstruction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/MANU_GetSerialProcessingInstructionResponse" message="tns:ISAMsphere_MANU_GetSerialProcessingInstruction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/MANU_GetSerialProcessingInstructionServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_MANU_GetSerialProcessingInstruction_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderLineInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderLineInfo" message="tns:ISAMsphere_ORD_ERP_OrderLineInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderLineInfoResponse" message="tns:ISAMsphere_ORD_ERP_OrderLineInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderLineInfoServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_OrderLineInfo_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderPositionsByParentDopId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderPositionsByParentDopId" message="tns:ISAMsphere_ORD_ERP_OrderPositionsByParentDopId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderPositionsByParentDopIdResponse" message="tns:ISAMsphere_ORD_ERP_OrderPositionsByParentDopId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderPositionsByParentDopIdServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_OrderPositionsByParentDopId_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderNoByDopId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderNoByDopId" message="tns:ISAMsphere_ORD_ERP_OrderNoByDopId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderNoByDopIdResponse" message="tns:ISAMsphere_ORD_ERP_OrderNoByDopId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderNoByDopIdServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_OrderNoByDopId_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_Order">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_Order" message="tns:ISAMsphere_ORD_ERP_Order_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderResponse" message="tns:ISAMsphere_ORD_ERP_Order_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_Order_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderWithDopTree">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderWithDopTree" message="tns:ISAMsphere_ORD_ERP_OrderWithDopTree_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderWithDopTreeResponse" message="tns:ISAMsphere_ORD_ERP_OrderWithDopTree_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_OrderWithDopTreeServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_OrderWithDopTree_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_IfaxOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IfaxOrder" message="tns:ISAMsphere_ORD_ERP_IfaxOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IfaxOrderResponse" message="tns:ISAMsphere_ORD_ERP_IfaxOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IfaxOrderServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_IfaxOrder_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_PositionChars">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionChars" message="tns:ISAMsphere_ORD_ERP_PositionChars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionCharsResponse" message="tns:ISAMsphere_ORD_ERP_PositionChars_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionCharsServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_PositionChars_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_PositionCharsTransformed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionCharsTransformed" message="tns:ISAMsphere_ORD_ERP_PositionCharsTransformed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionCharsTransformedResponse" message="tns:ISAMsphere_ORD_ERP_PositionCharsTransformed_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionCharsTransformedServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_PositionCharsTransformed_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_PositionMotorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionMotorData" message="tns:ISAMsphere_ORD_ERP_PositionMotorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionMotorDataResponse" message="tns:ISAMsphere_ORD_ERP_PositionMotorData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_PositionMotorDataServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_PositionMotorData_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_SupplyChain">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SupplyChain" message="tns:ISAMsphere_ORD_ERP_SupplyChain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SupplyChainResponse" message="tns:ISAMsphere_ORD_ERP_SupplyChain_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SupplyChainServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_SupplyChain_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_SerialChars">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SerialChars" message="tns:ISAMsphere_ORD_ERP_SerialChars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SerialCharsResponse" message="tns:ISAMsphere_ORD_ERP_SerialChars_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SerialCharsServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_SerialChars_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_SerialCharsTransformed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SerialCharsTransformed" message="tns:ISAMsphere_ORD_ERP_SerialCharsTransformed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SerialCharsTransformedResponse" message="tns:ISAMsphere_ORD_ERP_SerialCharsTransformed_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_SerialCharsTransformedServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_SerialCharsTransformed_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_ArticleMotorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_ArticleMotorData" message="tns:ISAMsphere_ORD_ERP_ArticleMotorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_ArticleMotorDataResponse" message="tns:ISAMsphere_ORD_ERP_ArticleMotorData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_ArticleMotorDataServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_ArticleMotorData_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_IdMotorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IdMotorData" message="tns:ISAMsphere_ORD_ERP_IdMotorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IdMotorDataResponse" message="tns:ISAMsphere_ORD_ERP_IdMotorData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IdMotorDataServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_IdMotorData_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_IdStatorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IdStatorData" message="tns:ISAMsphere_ORD_ERP_IdStatorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IdStatorDataResponse" message="tns:ISAMsphere_ORD_ERP_IdStatorData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/ORD_ERP_IdStatorDataServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_ORD_ERP_IdStatorData_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PDA_ReadPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/PDA_ReadPart" message="tns:ISAMsphere_PDA_ReadPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/PDA_ReadPartResponse" message="tns:ISAMsphere_PDA_ReadPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/PDA_ReadPartServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_PDA_ReadPart_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PDA_ReadInventoryPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/PDA_ReadInventoryPart" message="tns:ISAMsphere_PDA_ReadInventoryPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/PDA_ReadInventoryPartResponse" message="tns:ISAMsphere_PDA_ReadInventoryPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/PDA_ReadInventoryPartServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_PDA_ReadInventoryPart_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="REC_ReadReceiptsForPurchaseOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/REC_ReadReceiptsForPurchaseOrder" message="tns:ISAMsphere_REC_ReadReceiptsForPurchaseOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/REC_ReadReceiptsForPurchaseOrderResponse" message="tns:ISAMsphere_REC_ReadReceiptsForPurchaseOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/REC_ReadReceiptsForPurchaseOrderServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_REC_ReadReceiptsForPurchaseOrder_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadCluster">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadCluster" message="tns:ISAMsphere_SNR_SerialsReadCluster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadClusterResponse" message="tns:ISAMsphere_SNR_SerialsReadCluster_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadClusterServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_SerialsReadCluster_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromContextBySerial">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContextBySerial" message="tns:ISAMsphere_SNR_SerialsReadFromContextBySerial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContextBySerialResponse" message="tns:ISAMsphere_SNR_SerialsReadFromContextBySerial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContextBySerialServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_SerialsReadFromContextBySerial_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromMasterContextBySerial">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContextBySerial" message="tns:ISAMsphere_SNR_SerialsReadFromMasterContextBySerial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContextBySerialResponse" message="tns:ISAMsphere_SNR_SerialsReadFromMasterContextBySerial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContextBySerialServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_SerialsReadFromMasterContextBySerial_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromContext">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContext" message="tns:ISAMsphere_SNR_SerialsReadFromContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContextResponse" message="tns:ISAMsphere_SNR_SerialsReadFromContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContextServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_SerialsReadFromContext_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromMasterContext">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContext" message="tns:ISAMsphere_SNR_SerialsReadFromMasterContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContextResponse" message="tns:ISAMsphere_SNR_SerialsReadFromMasterContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContextServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_SerialsReadFromMasterContext_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_LifecycleEventsOverview">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_LifecycleEventsOverview" message="tns:ISAMsphere_SNR_LifecycleEventsOverview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_LifecycleEventsOverviewResponse" message="tns:ISAMsphere_SNR_LifecycleEventsOverview_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_LifecycleEventsOverviewServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_LifecycleEventsOverview_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_LifecycleEventData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_LifecycleEventData" message="tns:ISAMsphere_SNR_LifecycleEventData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_LifecycleEventDataResponse" message="tns:ISAMsphere_SNR_LifecycleEventData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_LifecycleEventDataServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_LifecycleEventData_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ActionWrite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ActionWrite" message="tns:ISAMsphere_SNR_ActionWrite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ActionWriteResponse" message="tns:ISAMsphere_SNR_ActionWrite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ActionWriteServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ActionWrite_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ActionCanWrite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ActionCanWrite" message="tns:ISAMsphere_SNR_ActionCanWrite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ActionCanWriteResponse" message="tns:ISAMsphere_SNR_ActionCanWrite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ActionCanWriteServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ActionCanWrite_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AssemblyWrite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AssemblyWrite" message="tns:ISAMsphere_SNR_AssemblyWrite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AssemblyWriteResponse" message="tns:ISAMsphere_SNR_AssemblyWrite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AssemblyWriteServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_AssemblyWrite_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AssemblyCanWrite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AssemblyCanWrite" message="tns:ISAMsphere_SNR_AssemblyCanWrite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AssemblyCanWriteResponse" message="tns:ISAMsphere_SNR_AssemblyCanWrite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AssemblyCanWriteServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_AssemblyCanWrite_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ErrorReplace">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorReplace" message="tns:ISAMsphere_SNR_ErrorReplace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorReplaceResponse" message="tns:ISAMsphere_SNR_ErrorReplace_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorReplaceServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ErrorReplace_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_DeviceRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DeviceRead" message="tns:ISAMsphere_SNR_DeviceRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DeviceReadResponse" message="tns:ISAMsphere_SNR_DeviceRead_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DeviceReadServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_DeviceRead_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ConnectToDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConnectToDevice" message="tns:ISAMsphere_SNR_ConnectToDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConnectToDeviceResponse" message="tns:ISAMsphere_SNR_ConnectToDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConnectToDeviceServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ConnectToDevice_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_DisconnectFromDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DisconnectFromDevice" message="tns:ISAMsphere_SNR_DisconnectFromDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DisconnectFromDeviceResponse" message="tns:ISAMsphere_SNR_DisconnectFromDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DisconnectFromDeviceServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_DisconnectFromDevice_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_DeliveryDeviceSpecificCharacteristic">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DeliveryDeviceSpecificCharacteristic" message="tns:ISAMsphere_SNR_DeliveryDeviceSpecificCharacteristic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DeliveryDeviceSpecificCharacteristicResponse" message="tns:ISAMsphere_SNR_DeliveryDeviceSpecificCharacteristic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_DeliveryDeviceSpecificCharacteristicServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_DeliveryDeviceSpecificCharacteristic_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ReadSerialProgressOnShopOrderAndAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ReadSerialProgressOnShopOrderAndAction" message="tns:ISAMsphere_SNR_ReadSerialProgressOnShopOrderAndAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ReadSerialProgressOnShopOrderAndActionResponse" message="tns:ISAMsphere_SNR_ReadSerialProgressOnShopOrderAndAction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ReadSerialProgressOnShopOrderAndActionServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ReadSerialProgressOnShopOrderAndAction_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_CompanyCatalogRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogRead" message="tns:ISAMsphere_SNR_CompanyCatalogRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogReadResponse" message="tns:ISAMsphere_SNR_CompanyCatalogRead_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogReadServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_CompanyCatalogRead_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_CompanyCatalogRefresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogRefresh" message="tns:ISAMsphere_SNR_CompanyCatalogRefresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogRefreshResponse" message="tns:ISAMsphere_SNR_CompanyCatalogRefresh_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogRefreshServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_CompanyCatalogRefresh_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ErrorCatalogRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogRead" message="tns:ISAMsphere_SNR_ErrorCatalogRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogReadResponse" message="tns:ISAMsphere_SNR_ErrorCatalogRead_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogReadServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ErrorCatalogRead_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ErrorCatalogRefresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogRefresh" message="tns:ISAMsphere_SNR_ErrorCatalogRefresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogRefreshResponse" message="tns:ISAMsphere_SNR_ErrorCatalogRefresh_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogRefreshServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ErrorCatalogRefresh_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AktionDefinitionRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionRead" message="tns:ISAMsphere_SNR_AktionDefinitionRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionReadResponse" message="tns:ISAMsphere_SNR_AktionDefinitionRead_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionReadServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_AktionDefinitionRead_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AktionDefinitionRefresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionRefresh" message="tns:ISAMsphere_SNR_AktionDefinitionRefresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionRefreshResponse" message="tns:ISAMsphere_SNR_AktionDefinitionRefresh_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionRefreshServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_AktionDefinitionRefresh_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ConfigParamDefinitionRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionRead" message="tns:ISAMsphere_SNR_ConfigParamDefinitionRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionReadResponse" message="tns:ISAMsphere_SNR_ConfigParamDefinitionRead_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionReadServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ConfigParamDefinitionRead_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_MeasureValueDefinitionRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_MeasureValueDefinitionRead" message="tns:ISAMsphere_SNR_MeasureValueDefinitionRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_MeasureValueDefinitionReadResponse" message="tns:ISAMsphere_SNR_MeasureValueDefinitionRead_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_MeasureValueDefinitionReadServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_MeasureValueDefinitionRead_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ConfigParamDefinitionWrite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionWrite" message="tns:ISAMsphere_SNR_ConfigParamDefinitionWrite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionWriteResponse" message="tns:ISAMsphere_SNR_ConfigParamDefinitionWrite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionWriteServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNR_ConfigParamDefinitionWrite_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNA_ReadMissingAumaSerialsFromSNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromSNR" message="tns:ISAMsphere_SNA_ReadMissingAumaSerialsFromSNR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromSNRResponse" message="tns:ISAMsphere_SNA_ReadMissingAumaSerialsFromSNR_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromSNRServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNA_ReadMissingAumaSerialsFromSNR_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNA_ReadMissingAumaSerialsFromPSC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromPSC" message="tns:ISAMsphere_SNA_ReadMissingAumaSerialsFromPSC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromPSCResponse" message="tns:ISAMsphere_SNA_ReadMissingAumaSerialsFromPSC_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromPSCServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNA_ReadMissingAumaSerialsFromPSC_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNA_CreateMissingAumaSerialsFromSNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromSNR" message="tns:ISAMsphere_SNA_CreateMissingAumaSerialsFromSNR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromSNRResponse" message="tns:ISAMsphere_SNA_CreateMissingAumaSerialsFromSNR_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromSNRServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNA_CreateMissingAumaSerialsFromSNR_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNA_CreateMissingAumaSerialsFromPSC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromPSC" message="tns:ISAMsphere_SNA_CreateMissingAumaSerialsFromPSC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromPSCResponse" message="tns:ISAMsphere_SNA_CreateMissingAumaSerialsFromPSC_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromPSCServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNA_CreateMissingAumaSerialsFromPSC_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNA_CreateSerialNumberProcess">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateSerialNumberProcess" message="tns:ISAMsphere_SNA_CreateSerialNumberProcess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateSerialNumberProcessResponse" message="tns:ISAMsphere_SNA_CreateSerialNumberProcess_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNA_CreateSerialNumberProcessServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNA_CreateSerialNumberProcess_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SNA_GetSerialNumbersWithFailedProcessSteps">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SNA_GetSerialNumbersWithFailedProcessSteps" message="tns:ISAMsphere_SNA_GetSerialNumbersWithFailedProcessSteps_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SNA_GetSerialNumbersWithFailedProcessStepsResponse" message="tns:ISAMsphere_SNA_GetSerialNumbersWithFailedProcessSteps_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SNA_GetSerialNumbersWithFailedProcessStepsServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SNA_GetSerialNumbersWithFailedProcessSteps_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOH_ReadWorkplaceDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadWorkplaceDescription" message="tns:ISAMsphere_SOH_ReadWorkplaceDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadWorkplaceDescriptionResponse" message="tns:ISAMsphere_SOH_ReadWorkplaceDescription_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadWorkplaceDescriptionServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SOH_ReadWorkplaceDescription_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOH_ReadShopOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderList" message="tns:ISAMsphere_SOH_ReadShopOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderListResponse" message="tns:ISAMsphere_SOH_ReadShopOrderList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderListServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SOH_ReadShopOrderList_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOH_ReadShopOrderDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderDetails" message="tns:ISAMsphere_SOH_ReadShopOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderDetailsResponse" message="tns:ISAMsphere_SOH_ReadShopOrderDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderDetailsServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SOH_ReadShopOrderDetails_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOH_WriteShopOrderConfirmation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderConfirmation" message="tns:ISAMsphere_SOH_WriteShopOrderConfirmation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderConfirmationResponse" message="tns:ISAMsphere_SOH_WriteShopOrderConfirmation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderConfirmationServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SOH_WriteShopOrderConfirmation_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOH_WriteShopOrderOperationConfirmation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderOperationConfirmation" message="tns:ISAMsphere_SOH_WriteShopOrderOperationConfirmation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderOperationConfirmationResponse" message="tns:ISAMsphere_SOH_WriteShopOrderOperationConfirmation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderOperationConfirmationServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SOH_WriteShopOrderOperationConfirmation_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOH_WriteShopOrderComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderComment" message="tns:ISAMsphere_SOH_WriteShopOrderComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderCommentResponse" message="tns:ISAMsphere_SOH_WriteShopOrderComment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderCommentServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SOH_WriteShopOrderComment_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOH_PartListTree">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/SOH_PartListTree" message="tns:ISAMsphere_SOH_PartListTree_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/SOH_PartListTreeResponse" message="tns:ISAMsphere_SOH_PartListTree_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/SOH_PartListTreeServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_SOH_PartListTree_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WDIA_ReadWiringDiagramPinouts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAMsphere/WDIA_ReadWiringDiagramPinouts" message="tns:ISAMsphere_WDIA_ReadWiringDiagramPinouts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAMsphere/WDIA_ReadWiringDiagramPinoutsResponse" message="tns:ISAMsphere_WDIA_ReadWiringDiagramPinouts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISAMsphere/WDIA_ReadWiringDiagramPinoutsServiceErrorFault" name="ServiceErrorFault" message="tns:ISAMsphere_WDIA_ReadWiringDiagramPinouts_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISAMsphere" type="tns:ISAMsphere">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Admin_TestAlive">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_TestAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_IsTestEnvironment">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_IsTestEnvironment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_ServiceRestart">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_ServiceRestart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_StatistikProvider">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_StatistikProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_StatistikRead">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_StatistikRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_StatistikReset">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_StatistikReset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_ServerListIFS">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_ServerListIFS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_OrderCacheClear">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_OrderCacheClear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_OrderCacheRemove">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_OrderCacheRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Admin_OrderCacheList">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/Admin_OrderCacheList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ACO_GetHostInformation">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ACO_GetHostInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ACO_GetDomainList">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ACO_GetDomainList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationByHost">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByHost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationsByHost">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByHost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationByDomain">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationByDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ACO_LoadApplicationConfigurationsByDomain">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ACO_LoadApplicationConfigurationsByDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ACO_SetHostOverride">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ACO_SetHostOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_GetUserListByRight">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_GetUserListByRight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_GetUserById">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_GetUserByWinLogin">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_GetUserByWinLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_AuthenticateByPW">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_AuthenticateByPW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_AuthenticateByEID">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_AuthenticateByEID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_AuthenticateByRFID">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_AuthenticateByRFID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_PasswordChange">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_PasswordChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AUR_EncryptPassword">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/AUR_EncryptPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_GetLagerDescription">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_GetLagerDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_GetLadelisten">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_GetLadelisten" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_GetLadeliste">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_GetLadeliste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_PackstückAusliefern">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_PackstückAusliefern" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_PackstückRücknehmen">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_PackstückRücknehmen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_PackstückBewegen">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_PackstückBewegen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_LadelisteAbschliessen">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_LadelisteAbschliessen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DEL_LadelisteFortfahren">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/DEL_LadelisteFortfahren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="KAN_ReadKanbanCards">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/KAN_ReadKanbanCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MAC_AllocateAddressBlock">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/MAC_AllocateAddressBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MAC_GetServiceInfo">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/MAC_GetServiceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MANU_GetWorkplaceDescription">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/MANU_GetWorkplaceDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MANU_PickSerialNumber">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/MANU_PickSerialNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MANU_GetSerialProcessingInstruction">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/MANU_GetSerialProcessingInstruction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderLineInfo">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_OrderLineInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderPositionsByParentDopId">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_OrderPositionsByParentDopId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderNoByDopId">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_OrderNoByDopId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_Order">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_Order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_OrderWithDopTree">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_OrderWithDopTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_IfaxOrder">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_IfaxOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_PositionChars">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_PositionChars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_PositionCharsTransformed">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_PositionCharsTransformed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_PositionMotorData">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_PositionMotorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_SupplyChain">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_SupplyChain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_SerialChars">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_SerialChars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_SerialCharsTransformed">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_SerialCharsTransformed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_ArticleMotorData">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_ArticleMotorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_IdMotorData">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_IdMotorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ORD_ERP_IdStatorData">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/ORD_ERP_IdStatorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PDA_ReadPart">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/PDA_ReadPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PDA_ReadInventoryPart">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/PDA_ReadInventoryPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="REC_ReadReceiptsForPurchaseOrder">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/REC_ReadReceiptsForPurchaseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadCluster">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_SerialsReadCluster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromContextBySerial">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContextBySerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromMasterContextBySerial">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContextBySerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromContext">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromContext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_SerialsReadFromMasterContext">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_SerialsReadFromMasterContext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_LifecycleEventsOverview">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_LifecycleEventsOverview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_LifecycleEventData">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_LifecycleEventData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ActionWrite">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ActionWrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ActionCanWrite">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ActionCanWrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AssemblyWrite">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_AssemblyWrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AssemblyCanWrite">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_AssemblyCanWrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ErrorReplace">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ErrorReplace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_DeviceRead">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_DeviceRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ConnectToDevice">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ConnectToDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_DisconnectFromDevice">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_DisconnectFromDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_DeliveryDeviceSpecificCharacteristic">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_DeliveryDeviceSpecificCharacteristic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ReadSerialProgressOnShopOrderAndAction">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ReadSerialProgressOnShopOrderAndAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_CompanyCatalogRead">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_CompanyCatalogRefresh">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_CompanyCatalogRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ErrorCatalogRead">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ErrorCatalogRefresh">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ErrorCatalogRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AktionDefinitionRead">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_AktionDefinitionRefresh">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_AktionDefinitionRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ConfigParamDefinitionRead">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_MeasureValueDefinitionRead">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_MeasureValueDefinitionRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNR_ConfigParamDefinitionWrite">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNR_ConfigParamDefinitionWrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNA_ReadMissingAumaSerialsFromSNR">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromSNR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNA_ReadMissingAumaSerialsFromPSC">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNA_ReadMissingAumaSerialsFromPSC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNA_CreateMissingAumaSerialsFromSNR">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromSNR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNA_CreateMissingAumaSerialsFromPSC">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNA_CreateMissingAumaSerialsFromPSC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNA_CreateSerialNumberProcess">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNA_CreateSerialNumberProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SNA_GetSerialNumbersWithFailedProcessSteps">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SNA_GetSerialNumbersWithFailedProcessSteps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SOH_ReadWorkplaceDescription">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SOH_ReadWorkplaceDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SOH_ReadShopOrderList">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SOH_ReadShopOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SOH_ReadShopOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SOH_WriteShopOrderConfirmation">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderConfirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SOH_WriteShopOrderOperationConfirmation">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderOperationConfirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SOH_WriteShopOrderComment">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SOH_WriteShopOrderComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SOH_PartListTree">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/SOH_PartListTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WDIA_ReadWiringDiagramPinouts">
+      <soap:operation soapAction="http://tempuri.org/ISAMsphere/WDIA_ReadWiringDiagramPinouts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SAMsphereServer">
+    <wsdl:port name="BasicHttpBinding_ISAMsphere" binding="tns:BasicHttpBinding_ISAMsphere">
+      <soap:address location="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

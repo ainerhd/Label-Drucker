@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="c5c724c0-4ed5-4766-bff4-7dc5edf6863a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SAMsphereServer.xsd" MetadataType="Schema" ID="6bd250e2-b779-4b0d-a0ba-05a4fb7be6bd" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd2" />
+    <MetadataFile FileName="SAMsphereServer1.xsd" MetadataType="Schema" ID="c9016549-42af-4be2-853e-199db87953d7" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd5" />
+    <MetadataFile FileName="SAMsphereServer2.xsd" MetadataType="Schema" ID="d8555f9e-f10c-4902-a65f-5adf05c64d60" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd9" />
+    <MetadataFile FileName="SAMsphereServer3.xsd" MetadataType="Schema" ID="accca7c4-b65d-4dd0-9d6f-2c27811de92a" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd4" />
+    <MetadataFile FileName="SAMsphereServer.disco" MetadataType="Disco" ID="743130d9-f846-42a3-abee-50ae51919eb9" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?disco" />
+    <MetadataFile FileName="SAMsphereServer.wsdl" MetadataType="Wsdl" ID="9c5d2f5c-9ad7-4d67-aca1-fb13f99f5362" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?wsdl" />
+    <MetadataFile FileName="SAMsphereServer4.xsd" MetadataType="Schema" ID="9d22404a-6de5-496e-b351-422414d73e27" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd3" />
+    <MetadataFile FileName="SAMsphereServer5.xsd" MetadataType="Schema" ID="90ea505d-53ff-4786-aed5-bca82ea1f5a0" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd1" />
+    <MetadataFile FileName="SAMsphereServer6.xsd" MetadataType="Schema" ID="e53d7268-0f3a-4342-bbd1-c4ff6061b4d5" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd8" />
+    <MetadataFile FileName="SAMsphereServer7.xsd" MetadataType="Schema" ID="374d2747-1b9f-4786-87bb-0a2e9a9d210c" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd7" />
+    <MetadataFile FileName="SAMsphereServer8.xsd" MetadataType="Schema" ID="a878c1a3-28b9-45ce-a2b3-c0b6a4ffe72b" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd0" />
+    <MetadataFile FileName="SAMsphereServer9.xsd" MetadataType="Schema" ID="2caf2862-fd9a-4cea-82b2-b63722842db8" SourceId="1" SourceUrl="http://wmapp09.auma.com/Webservices/SAMsphereServer/SAMsphereServer.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
